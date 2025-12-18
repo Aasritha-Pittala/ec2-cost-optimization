@@ -23,9 +23,6 @@ I used my existing EC2 instance from Project 1 as the test target and optionally
 Key = AutoStop
 Value = true
 
-python
-Copy code
-
 This ensures that the Lambda only stops tagged instances. I verified the tag in the EC2 Console.
 
 ---
