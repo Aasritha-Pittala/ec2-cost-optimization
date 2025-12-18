@@ -121,11 +121,11 @@ To avoid unnecessary charges, I deleted or disabled the EventBridge rule, delete
 Outcome
 Through this project, I successfully:
 
-Automated EC2 cost optimization using Lambda and EventBridge
+1. Automated EC2 cost optimization using Lambda and EventBridge
 
-Used IAM roles and inline policies to secure permissions
+2. Used IAM roles and inline policies to secure permissions
 
-Monitored EC2 CPU utilization with CloudWatch
+3. Monitored EC2 CPU utilization with CloudWatch
 
-Safely stopped idle EC2 instances using tag-based filtering
+4. Safely stopped idle EC2 instances using tag-based filtering
 
