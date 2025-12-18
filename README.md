@@ -42,6 +42,7 @@ I created a Lambda function named `stop-idle-ec2` with Python runtime (3.9+). I 
 
 python:
 
+```
 import os
 import boto3
 import logging
@@ -100,13 +101,12 @@ def lambda_handler(event, context):
                 ec2.stop_instances(InstanceIds=[iid])
                 stopped.append(iid)
     return {"stopped": stopped}
+```
 I also configured environment variables for the Lambda:
 
 THRESHOLD = 5
 
 LOOKBACK_MINS = 60
-
-(Optional) REQUIRE_TAG_KEY = AutoStop and REQUIRE_TAG_VALUE = true for tagged instances
 
 4. Created EventBridge Rule
 I created a scheduled EventBridge rule named stop-idle-ec2-every-15m to trigger the Lambda every 15 minutes. The Lambda function was set as the target. This allowed the automation to run without manual intervention.
