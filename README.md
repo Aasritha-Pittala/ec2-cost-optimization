@@ -40,7 +40,8 @@ This gave the Lambda permission to monitor and stop EC2 instances as needed.
 ### 3. Created the Lambda Function
 I created a Lambda function named `stop-idle-ec2` with Python runtime (3.9+). I attached the IAM role I created and pasted the following code:
 
-```python
+python:
+
 import os
 import boto3
 import logging
